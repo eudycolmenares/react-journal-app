@@ -32,8 +32,23 @@
 }
 .journal__entries {
   flex: 1 1 auto;
-  margin-top: 30px;
+  margin: 30px 0 10px 0;
+  padding-right: 5px;
   overflow-y: auto;
+  :last-child {
+    margin-bottom: 0px;
+  }
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+  &::-webkit-scrollbar-track {
+    background: darken($color: $white, $amount: 10);
+    border-radius: 50px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $primary;
+    border-radius: 50px;
+  }
 }
 .journal__entry {
   background-color: $white;
